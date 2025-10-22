@@ -1,0 +1,153 @@
+/*
+ * =================================================================
+ * Catppuccin-like Purple/Lavender Theme
+ * =================================================================
+*/
+
+/* --- Cores --- */
+@define-color bg #0C0012;       /* Fundo (quase preto azulado) */
+@define-color module-bg #211E46; /* Fundo dos módulos (roxo bem escuro) */
+@define-color fg #CBC9CC;       /* Texto principal (cinza claro) */
+@define-color accent #9C90AA;    /* Destaque / Ativo (lavanda) */
+@define-color inactive #6E6189;  /* Inativo / Focado (roxo médio) */
+@define-color urgent #9C90AA;    /* Urgente (lavanda, conforme sua paleta) */
+@define-color dark-text #0C0012; /* Texto para fundos claros */
+
+* {
+    font-family: JetBrainsMono Nerd Font, FontAwesome, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: alpha(@bg, 0.75); /* Fundo com 75% de opacidade */
+    color: @fg;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px @accent;
+}
+
+/* --- Workspaces --- */
+#workspaces {
+    background: @module-bg;
+    margin: 4px;
+    padding: 0 4px;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @inactive;
+}
+
+#workspaces button:hover {
+    color: @fg;
+    background: none;
+    box-shadow: inset 0 -3px @accent;
+}
+
+#workspaces button.active {
+    color: @dark-text;
+    background-color: @accent;
+    border-radius: 8px;
+}
+
+#workspaces button.urgent {
+    color: @dark-text;
+    background-color: @urgent;
+    border-radius: 8px;
+}
+
+#workspaces button.empty {
+    color: @inactive;
+}
+
+/* --- Módulos --- */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#pulseaudio,
+#network,
+#tray,
+#language {
+    background: @module-bg;
+    color: @fg;
+    padding: 0 12px;
+    margin: 4px 0;
+}
+
+/* Arredondar primeiro e último módulo */
+.modules-right > widget:first-child > #clock {
+    border-radius: 0 10px 10px 0;
+    margin-right: 4px;
+}
+
+.modules-left > widget:last-child > #tray {
+    border-radius: 10px 0 0 10px;
+    margin-left: 4px;
+}
+
+/* --- Módulos Específicos --- */
+#clock {
+    color: @accent; /* Dando um destaque ao relógio */
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @accent;
+}
+
+@keyframes blink {
+    to {
+        background-color: @fg;
+        color: @dark-text;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: @urgent;
+    color: @dark-text;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#network.disconnected {
+    color: @urgent;
+}
+
+#pulseaudio {
+    color: @fg;
+}
+
+#pulseaudio.muted {
+    color: @inactive;
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+#language {
+    color: @accent;
+    border-radius: 10px;
+    margin: 4px;
+}

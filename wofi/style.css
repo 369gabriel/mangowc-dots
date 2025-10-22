@@ -1,0 +1,43 @@
+window {
+    margin: 0px;
+    border: 2px solid #555555;
+    background-color: #1E1E1E;
+    border-radius: 8px;
+}
+
+#input {
+    margin: 5px;
+    padding: 6px;
+    border: none;
+    background-color: #2B2B2B;
+    color: #E0E0E0;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+#inner-box {
+    margin: 5px;
+    background-color: transparent;
+}
+
+#outer-box {
+    margin: 5px;
+    background-color: transparent;
+}
+
+#scroll {
+    margin: 0px;
+}
+
+#text {
+    color: #E0E0E0;
+}
+
+#entry:selected {
+    background-color: #666666;
+    color: #FFFFFF;
+}
+
+#entry:selected #text {
+    font-weight: bold;
+}

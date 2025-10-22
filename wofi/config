@@ -1,0 +1,40 @@
+#
+# Wofi - config
+# Configuração minimalista para acompanhar o style.css
+#
+
+# Modo de operação principal (drun para aplicativos .desktop)
+show=drun
+
+# Largura do menu (pode ser em pixels ou porcentagem)
+width=20%
+
+# Altura do menu (pode ser em pixels ou porcentagem)
+height=20%
+
+# Oculta a barra de rolagem para um visual mais limpo
+hide_scroll=true
+
+# Torna a busca insensível a maiúsculas/minúsculas
+insensitive=true
+
+# Define o caminho para o arquivo de estilo
+# Certifique-se de que este caminho está correto para o seu sistema
+# O padrão é ~/.config/wofi/style.css
+style=style.css
+
+# Permite que o Wofi ocupe a tela inteira se o conteúdo for grande
+allow_images=true
+
+# Texto do prompt (deixado em branco para um visual mais minimalista)
+prompt=
+
+# Número de colunas
+columns=1
+
+# Posição na tela (0=centro, 1=topo, 2=esquerda, etc.)
+# Consulte a documentação do wofi para todas as opções.
+location=center
+
+# Encerra o wofi se o foco for perdido
+term=
