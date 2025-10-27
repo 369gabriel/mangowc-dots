@@ -1,0 +1,73 @@
+@define-color bg_color        #1A1A1A;
+@define-color fg_color        #FFCCD5;
+@define-color accent_color    #B42222;
+@define-color accent_light    #FF4D6D;
+@define-color accent_dark     #660000;
+@define-color box_color       #800000;
+@define-color divider_color   #660000;
+
+window, dialog, .background {
+    background-color: @bg_color;
+    color: @fg_color;
+}
+
+button {
+    background-color: @accent_color;
+    color: @fg_color;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+button:hover {
+    background-color: @accent_light;
+}
+
+button:active {
+    background-color: @accent_dark;
+}
+
+entry, textview, spinbutton {
+    background-color: shade(@bg_color, 1.1);
+    color: @fg_color;
+    border: 1px solid @divider_color;
+}
+
+entry:focus, textview:focus, spinbutton:focus {
+    border-color: @accent_light;
+}
+
+headerbar {
+    background-color: @box_color;
+    color: @fg_color;
+    border-bottom: 1px solid @divider_color;
+}
+
+headerbar.titlebar {
+    background-color: @box_color;
+}
+
+scrollbar slider {
+    background-color: @accent_color;
+    border-radius: 4px;
+}
+
+scrollbar slider:hover {
+    background-color: @accent_light;
+}
+
+scrollbar slider:active {
+    background-color: @accent_dark;
+}
+
+.selection {
+    background-color: @accent_light;
+    color: @bg_color;
+}
+
+tooltip {
+    background-color: @box_color;
+    color: @fg_color;
+    border: 1px solid @divider_color;
+}
+

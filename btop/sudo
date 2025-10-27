@@ -1,0 +1,81 @@
+# Purple Ricing Theme
+
+# Colors should be in 6 or 2 character hexadecimal or single spaced rgb decimal: "#RRGGBB", "#BW" or "0-255 0-255 0-255"
+# example for white: "#FFFFFF", "#ff" or "255 255 255".
+
+# All graphs and meters can be gradients
+# For single color graphs leave "mid" and "end" variable empty.
+# Use "start" and "end" variables for two color gradient
+# Use "start", "mid" and "end" for three color gradient
+
+# Fundo principal, o roxo mais escuro do tema
+theme[main_bg]="#0C0012"
+
+# Cor do texto principal
+theme[main_fg]="#CBC9CC"
+
+# Cor do título das caixas
+theme[title]="#BE95FF"
+
+# Cor de destaque para atalhos de teclado
+theme[hi_fg]="#9C90AA"
+
+# Cor de fundo do item selecionado na lista de processos
+theme[selected_bg]="#BE95FF"
+
+# Cor do texto do item selecionado na lista de processos
+theme[selected_fg]="#0C0012"
+
+# Cor do texto inativo/desabilitado
+theme[inactive_fg]="#443A67"
+
+# Cores diversas para a caixa de processos
+theme[proc_misc]="#9C90AA"
+
+# Cor da borda das caixas
+theme[cpu_box]="#6E6189"
+theme[mem_box]="#6E6189"
+theme[net_box]="#6E6189"
+theme[proc_box]="#6E6189"
+
+# Cor das linhas divisórias
+theme[div_line]="#443A67"
+
+# --- GRADIENTES ---
+# Gradiente padrão: Roxo Escuro -> Lavanda -> Roxo Vibrante
+
+# Gráfico de temperatura
+theme[temp_start]="#443A67"
+theme[temp_mid]="#9C90AA"
+theme[temp_end]="#BE95FF"
+
+# Gráfico de CPU
+theme[cpu_start]="#443A67"
+theme[cpu_mid]="#9C90AA"
+theme[cpu_end]="#BE95FF"
+
+# Medidores de Memória/Disco
+theme[free_start]="#443A67"
+theme[free_mid]="#9C90AA"
+theme[free_end]="#BE95FF"
+
+theme[cached_start]="#443A67"
+theme[cached_mid]="#9C90AA"
+theme[cached_end]="#BE95FF"
+
+theme[available_start]="#443A67"
+theme[available_mid]="#9C90AA"
+theme[available_end]="#BE95FF"
+
+theme[used_start]="#443A67"
+theme[used_mid]="#9C90AA"
+theme[used_end]="#BE95FF"
+
+# Gráficos de Rede (Download/Upload)
+theme[download_start]="#6E6189"
+theme[download_mid]="#9C90AA"
+theme[download_end]="#BE95FF"
+
+theme[upload_start]="#6E6189"
+theme[upload_mid]="#9C90AA"
+theme[upload_end]="#BE95FF"

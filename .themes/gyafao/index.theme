@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=gyafao
+Comment=wtf
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+Name=gyafao
+GtkTheme=gyafao
+IconTheme=gyafao
+MetacityTheme=gyafao
